@@ -1,0 +1,257 @@
+INFO: Using the sample.pas file for input
+enter <program>
+    -->found PROGRAM
+    -->found AREA
+    -->found ;
+    enter <block>
+        -->found VAR
+        -->found HEIGHT
+        -->found :
+        -->found REAL
+        -->found ;
+
+        -->found WIDTH
+        -->found :
+        -->found REAL
+        -->found ;
+
+        -->found PI
+        -->found :
+        -->found REAL
+        -->found ;
+
+        -->found RAREA
+        -->found :
+        -->found REAL
+        -->found ;
+
+        -->found SAREA
+        -->found :
+        -->found REAL
+        -->found ;
+
+        -->found AREA
+        -->found :
+        -->found REAL
+        -->found ;
+
+        enter <compound_statement>
+            -->found BEGIN
+            enter <statement>
+                enter <assignment>
+                    -->found PI
+                    -->found :=
+                    enter <expression>
+                        enter <simple expression>
+                            enter <term>
+                                enter <factor>
+                                    -->found 3.14159
+                                exit <factor>
+                            exit <term>
+                        exit <simple expression>
+                    exit <expression>
+                exit <assignment>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <read>
+                    -->found READ
+                    -->found (
+                    -->found HEIGHT
+                    -->found )
+                exit <read>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <read>
+                    -->found READ
+                    -->found (
+                    -->found WIDTH
+                    -->found )
+                exit <read>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <assignment>
+                    -->found RAREA
+                    -->found :=
+                    enter <expression>
+                        enter <simple expression>
+                            enter <term>
+                                enter <factor>
+                                    -->found HEIGHT
+                                exit <factor>
+                                -->found *
+                                enter <factor>
+                                    -->found WIDTH
+                                exit <factor>
+                            exit <term>
+                        exit <simple expression>
+                    exit <expression>
+                exit <assignment>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <assignment>
+                    -->found SAREA
+                    -->found :=
+                    enter <expression>
+                        enter <simple expression>
+                            enter <term>
+                                enter <factor>
+                                    -->found PI
+                                exit <factor>
+                                -->found *
+                                enter <factor>
+                                    -->found WIDTH
+                                exit <factor>
+                                -->found *
+                                enter <factor>
+                                    -->found WIDTH
+                                exit <factor>
+                                -->found /
+                                enter <factor>
+                                    -->found 8.0
+                                exit <factor>
+                            exit <term>
+                        exit <simple expression>
+                    exit <expression>
+                exit <assignment>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <assignment>
+                    -->found AREA
+                    -->found :=
+                    enter <expression>
+                        enter <simple expression>
+                            enter <term>
+                                enter <factor>
+                                    -->found RAREA
+                                exit <factor>
+                            exit <term>
+                            -->found -
+                            enter <term>
+                                enter <factor>
+                                    -->found SAREA
+                                exit <factor>
+                            exit <term>
+                        exit <simple expression>
+                    exit <expression>
+                exit <assignment>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <write>
+                    -->found WRITE
+                    -->found (
+                    -->found ' INPUT VALUES: '
+                    -->found )
+                exit <write>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <write>
+                    -->found WRITE
+                    -->found (
+                    -->found HEIGHT
+                    -->found )
+                exit <write>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <write>
+                    -->found WRITE
+                    -->found (
+                    -->found WIDTH
+                    -->found )
+                exit <write>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <write>
+                    -->found WRITE
+                    -->found (
+                    -->found ' AREA = '
+                    -->found )
+                exit <write>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <write>
+                    -->found WRITE
+                    -->found (
+                    -->found AREA
+                    -->found )
+                exit <write>
+            exit <statement>
+            -->found END
+        exit <compound_statement>
+    exit <block>
+exit <program>
+
+=== GO BULLDOGS! Your parse was successful! ===
+
+User Defined Symbols:
+AREA
+HEIGHT
+PI
+RAREA
+SAREA
+WIDTH
+
+
+*** In order traversal of parse tree ***
+Program Name AREA
+Begin Compound Statement
+Assignment PI := expression( simple_expression( term( factor( 3.14159 ) ) ) )
+Read Value HEIGHT
+Read Value WIDTH
+Assignment RAREA := expression( simple_expression( term( factor( HEIGHT ) * factor( WIDTH ) ) ) )
+Assignment SAREA := expression( simple_expression( term( factor( PI ) * factor( WIDTH ) * factor( WIDTH ) / factor( 8 ) ) ) )
+Assignment AREA := expression( simple_expression( term( factor( RAREA ) ) - term( factor( SAREA ) ) ) )
+Write String ' INPUT VALUES: '
+Write Value HEIGHT
+Write Value WIDTH
+Write String ' AREA = '
+Write Value AREA
+End Compound Statement
+
+
+*** Delete the parse tree ***
+Deleting a programNode
+Deleting a blockNode
+Deleting a compoundNode
+Deleting an assignmentNode
+Deleting an expressionNode
+Deleting a simpleExpressionNode
+Deleting a termNode
+Deleting a factorNode
+Deleting a readNode
+Deleting a readNode
+Deleting an assignmentNode
+Deleting an expressionNode
+Deleting a simpleExpressionNode
+Deleting a termNode
+Deleting a factorNode
+Deleting a factorNode
+Deleting an assignmentNode
+Deleting an expressionNode
+Deleting a simpleExpressionNode
+Deleting a termNode
+Deleting a factorNode
+Deleting a factorNode
+Deleting a factorNode
+Deleting a factorNode
+Deleting an assignmentNode
+Deleting an expressionNode
+Deleting a simpleExpressionNode
+Deleting a termNode
+Deleting a factorNode
+Deleting a termNode
+Deleting a factorNode
+Deleting a writeNode
+Deleting a writeNode
+Deleting a writeNode
+Deleting a writeNode
+Deleting a writeNode

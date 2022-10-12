@@ -1,0 +1,149 @@
+INFO: Using the not_sample.pas file for input
+enter <program>
+    -->found PROGRAM
+    -->found NOTEX
+    -->found ;
+    enter <block>
+        -->found VAR
+        -->found A
+        -->found :
+        -->found INTEGER
+        -->found ;
+
+        enter <compound_statement>
+            -->found BEGIN
+            enter <statement>
+                enter <assignment>
+                    -->found A
+                    -->found :=
+                    enter <expression>
+                        enter <simple expression>
+                            enter <term>
+                                enter <factor>
+                                    -->found 0
+                                exit <factor>
+                            exit <term>
+                        exit <simple expression>
+                    exit <expression>
+                exit <assignment>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <if statement>
+                    -->found IF
+                    enter <expression>
+                        enter <simple expression>
+                            enter <term>
+                                enter <factor>
+                                    -->found NOT
+                                    enter <factor>
+                                        -->found A
+                                    exit <factor>
+                                exit <factor>
+                            exit <term>
+                        exit <simple expression>
+                    exit <expression>
+                    -->found THEN
+                    enter <statement>
+                        enter <write>
+                            -->found WRITE
+                            -->found (
+                            -->found 'TRUE'
+                            -->found )
+                        exit <write>
+                    exit <statement>
+                    -->found ELSE
+                    enter <statement>
+                        enter <assignment>
+                            -->found A
+                            -->found :=
+                            enter <expression>
+                                enter <simple expression>
+                                    enter <term>
+                                        enter <factor>
+                                            -->found NOT
+                                            enter <factor>
+                                                -->found (
+                                                enter <expression>
+                                                    enter <simple expression>
+                                                        enter <term>
+                                                            enter <factor>
+                                                                -->found 3
+                                                            exit <factor>
+                                                        exit <term>
+                                                    exit <simple expression>
+                                                    -->found <
+                                                    enter <simple expression>
+                                                        enter <term>
+                                                            enter <factor>
+                                                                -->found 4
+                                                            exit <factor>
+                                                        exit <term>
+                                                    exit <simple expression>
+                                                exit <expression>
+                                                -->found )
+                                            exit <factor>
+                                        exit <factor>
+                                    exit <term>
+                                exit <simple expression>
+                            exit <expression>
+                        exit <assignment>
+                    exit <statement>
+                exit <if statement>
+            exit <statement>
+            -->found END
+        exit <compound_statement>
+    exit <block>
+exit <program>
+
+=== GO BULLDOGS! Your parse was successful! ===
+
+User Defined Symbols:
+A
+
+*** In order traversal of parse tree ***
+Program Name NOTEX
+Begin Compound Statement
+Assignment A := expression( simple_expression( term( factor( 0 ) ) ) )
+If expression( simple_expression( term( factor( NOT factor( A ) ) ) ) )
+%%%%%%%% True Statement %%%%%%%%
+Write String 'TRUE'
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% False Statement %%%%%%%%
+Assignment A := expression( simple_expression( term( factor( NOT nested_expression( expression( simple_expression( term( factor( 3 ) ) ) < simple_expression( term( factor( 4 ) ) ) ) ) ) ) ) )
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+End Compound Statement
+
+
+*** Interpreting the TIPS program ***
+TRUE
+
+*** Delete the parse tree ***
+Deleting a programNode
+Deleting a blockNode
+Deleting a compoundNode
+Deleting an assignmentNode
+Deleting an expressionNode
+Deleting a simpleExpressionNode
+Deleting a termNode
+Deleting a factorNode
+Deleting an ifNode
+Deleting an expressionNode
+Deleting a simpleExpressionNode
+Deleting a termNode
+Deleting a factorNode
+Deleting a factorNode
+Deleting a writeNode
+Deleting an assignmentNode
+Deleting an expressionNode
+Deleting a simpleExpressionNode
+Deleting a termNode
+Deleting a factorNode
+Deleting a factorNode
+Deleting an expressionNode
+Deleting a simpleExpressionNode
+Deleting a termNode
+Deleting a factorNode
+Deleting a simpleExpressionNode
+Deleting a termNode
+Deleting a factorNode
